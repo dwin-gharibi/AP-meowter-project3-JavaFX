@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXPasswordField?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import io.github.palexdev.materialfx.controls.MFXToggleButton?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.layout.StackPane?>
+
+<?import javafx.geometry.Insets?>
+<StackPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" stylesheets="@/css/settings.css" fx:controller="ir.ac.kntu.controllers.SettingsController">
+    <padding>
+        <Insets bottom="30.0" left="40.0" top="30.0"/>
+    </padding>
+    <VBox alignment="CENTER">
+        <Text text="Settings" style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+        <VBox alignment="CENTER_LEFT" spacing="20" styleClass="vbox">
+            <Text text="Change Password" styleClass="section-header" />
+            <MFXPasswordField fx:id="newPasswordField" floatMode="BORDER" floatingText="New Password" styleClass="mfx-password-field" />
+            <MFXPasswordField fx:id="confirmPasswordField" floatMode="BORDER" floatingText="Confirm New Password" styleClass="mfx-password-field" style="-fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 5; -fx-fill:#FFFFFF;"/>
+        </VBox>
+        <padding>
+            <Insets bottom="50.0"/>
+        </padding>
+
+        <VBox alignment="CENTER_LEFT" spacing="20" styleClass="vbox">
+            <Text text="Change Username" styleClass="section-header"/>
+            <MFXTextField fx:id="newUsernameField" floatMode="BORDER" floatingText="New Username" style="-fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 5; -fx-fill:#FFFFFF;"/>
+        </VBox>
+
+        <padding>
+            <Insets bottom="50.0"/>
+        </padding>
+
+        <VBox alignment="CENTER_LEFT" spacing="20" styleClass="vbox">
+            <Text text="Profile Visibility" styleClass="section-header"/>
+            <MFXToggleButton fx:id="profileVisibilityToggle" text="Public" style="-fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 5; -fx-fill:#FFFFFF;" />
+            <MFXButton onAction="#onSaveSettings" text="Save" style="-fx-background-color: #1DA1F2; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 5; -fx-fill:#FFFFFF;"  />
+        </VBox>
+
+    </VBox>
+</StackPane>

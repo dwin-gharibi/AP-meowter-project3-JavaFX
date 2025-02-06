@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXScrollPane?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import io.github.palexdev.mfxresources.fonts.MFXFontIcon?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="rootPane" styleClass="rootPane" stylesheets="@/css/messages.css"
+            xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ir.ac.kntu.controllers.MessageController">
+
+    <top>
+        <HBox alignment="CENTER_RIGHT" styleClass="header">
+            <Region HBox.hgrow="ALWAYS"/>
+            <MFXButton text="New Chat" styleClass="header-button" fx:id="newChatButton" onAction="#startNewChat">
+                <graphic>
+                    <MFXFontIcon description="fas-plus" size="16" styleClass="header-icon"/>
+                </graphic>
+            </MFXButton>
+        </HBox>
+    </top>
+
+    <left>
+        <VBox styleClass="sidebar">
+            <MFXTextField fx:id="searchField" floatMode="BORDER" floatingText="Search chats..." styleClass="search-bar"/>
+
+            <MFXScrollPane fitToWidth="true" hbarPolicy="NEVER" styleClass="chat-list-scroll">
+                <VBox fx:id="chatListVBox" styleClass="chat-list">
+                </VBox>
+            </MFXScrollPane>
+        </VBox>
+    </left>
+
+    <center>
+        <VBox styleClass="chat-window">
+            <HBox styleClass="chat-header" fx:id="chatHeader">
+                <ImageView fx:id="chatUserAvatar" fitWidth="40" fitHeight="40" styleClass="chat-avatar"/>
+                <VBox styleClass="chat-user-info">
+                    <Label fx:id="chatUserLabel" text="" styleClass="chat-username"/>
+                    <Label fx:id="chatStatusLabel" text="" styleClass="chat-status"/>
+                </VBox>
+                <Region HBox.hgrow="ALWAYS"/>
+                <MFXButton text="" styleClass="chat-action-button" fx:id="closeChatButton"/>
+            </HBox>
+
+            <MFXScrollPane fitToWidth="true" hbarPolicy="NEVER" styleClass="chat-messages-scroll" fx:id="chatMessagesScrollPane">
+                <VBox fx:id="chatMessagesVBox" styleClass="chat-messages">
+                </VBox>
+            </MFXScrollPane>
+
+            <HBox styleClass="message-input-container">
+                <MFXTextField fx:id="messageInputField" floatMode="BORDER" floatingText="Type a message..." styleClass="message-input"/>
+                <MFXButton text="" fx:id="sendButton" styleClass="send-button" onAction="#sendMessage">
+                    <graphic>
+                        <MFXFontIcon description="fas-paper-plane" size="16"
+                                     style="-fx-icon-color: white; -mfx-color: white;" />
+                    </graphic>
+                </MFXButton>
+
+            </HBox>
+        </VBox>
+    </center>
+
+    <bottom>
+        <HBox alignment="CENTER" styleClass="footer">
+            <Label text="© 2025 Meowter. All rights reserved." styleClass="footer-text"/>
+        </HBox>
+    </bottom>
+</BorderPane>

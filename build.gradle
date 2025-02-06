@@ -1,0 +1,133 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.1.0'
+}
+
+group = 'ir.ac.kntu'
+version = '1.0-SNAPSHOT'
+
+java {
+    sourceCompatibility = '17'
+}
+
+javafx {
+    version = "22.0.1"
+    modules = [ 'javafx.controls', 'javafx.fxml' ]
+}
+
+mainClassName = 'ir.ac.kntu.Main'
+
+repositories {
+    mavenCentral()
+}
+
+sourceSets {
+    main {
+        resources {
+            srcDirs = ['src/main/resources']
+        }
+    }
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testImplementation 'net.sourceforge.pmd:pmd-java:6.55.0'
+    testImplementation 'com.puppycrawl.tools:checkstyle:10.12.1'
+
+    implementation 'io.github.palexdev:materialfx:11.13.5'
+    implementation 'org.kordamp.ikonli:ikonli-core:12.3.1'
+    implementation 'org.kordamp.ikonli:ikonli-javafx:12.3.1'
+
+    // Font Awesome 5 icon pack
+    implementation 'org.kordamp.ikonli:ikonli-fontawesome5-pack:12.3.1'
+
+    implementation 'org.openjfx:javafx-controls:20'
+    implementation 'org.openjfx:javafx-fxml:20'
+    implementation "io.github.palexdev:scenicview:$scenicView"
+    implementation("fr.brouillard.oss:cssfx:$cssfx") { exclude group: 'org.openjfx' }
+    implementation "org.kordamp.ikonli:ikonli-core:$ikonli"
+    implementation "org.kordamp.ikonli:ikonli-javafx:$ikonli"
+    implementation "org.kordamp.ikonli:ikonli-fontawesome5-pack:$ikonli"
+    implementation "io.github.palexdev:virtualizedfx:$vfx"
+    implementation 'io.github.palexdev:materialfx:11.13.5'
+
+    // JPA API (Jakarta Persistence API)
+    implementation 'jakarta.persistence:jakarta.persistence-api:2.2.3'
+
+    implementation 'org.openjfx:javafx-controls:21'
+    implementation 'org.openjfx:javafx-fxml:21'
+    implementation 'org.openjfx:javafx-base:21'
+    implementation 'org.openjfx:javafx-graphics:21'
+
+    implementation 'io.github.palexdev:materialfx:11.17.0'
+
+    implementation("org.openjfx:javafx-controls:21")
+    implementation("org.openjfx:javafx-fxml:21")
+    implementation("org.openjfx:javafx-base:21")
+    implementation("org.openjfx:javafx-graphics:21")
+
+    // Hibernate Core for JPA functionality
+    implementation 'org.hibernate:hibernate-core:5.6.7.Final'
+
+    // MySQL Connector for database connection
+    implementation 'mysql:mysql-connector-java:8.0.28'
+
+    // Hibernate Validator for bean validation
+    implementation 'org.hibernate.validator:hibernate-validator:6.1.5.Final'
+
+    // Jakarta Transaction API
+    implementation 'jakarta.transaction:jakarta.transaction-api:2.0.1'
+
+    // Jackson Databind for JSON serialization/deserialization
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.0'
+
+    // Redis client for pub/sub
+    implementation 'redis.clients:jedis:4.3.1'
+
+    implementation 'org.neo4j.driver:neo4j-java-driver:5.10.0'
+
+    // JUnit for testing
+    implementation platform('org.junit:junit-bom:5.9.1')
+    implementation 'org.junit.jupiter:junit-jupiter'
+
+    // Code quality tools (optional for analysis)
+    implementation 'net.sourceforge.pmd:pmd-java:6.55.0'
+    implementation 'com.puppycrawl.tools:checkstyle:10.12.1'
+
+    implementation 'org.slf4j:slf4j-api:1.7.36'
+    implementation 'ch.qos.logback:logback-classic:1.2.11'
+    implementation 'org.apache.commons:commons-text:1.10.0'
+
+
+    implementation 'org.apache.kafka:kafka-clients:3.5.0'
+    implementation 'org.neo4j.driver:neo4j-java-driver:5.3.0'
+
+
+    implementation 'com.rabbitmq:amqp-client:5.17.0'
+
+    implementation 'io.prometheus:prometheus-metrics-core:1.3.5'
+    implementation 'io.prometheus:prometheus-metrics-instrumentation-jvm:1.3.5'
+    implementation 'io.prometheus:prometheus-metrics-exporter-httpserver:1.3.5'
+    implementation 'io.prometheus:prometheus-metrics-simpleclient-bridge:1.0.0'
+
+    implementation project(':materialfx')
+}
+
+ext {
+    scriptsDir = "$rootDir/scripts"
+}
+
+subprojects {
+    apply plugin: 'org.openjfx.javafxplugin'
+
+    javafx {
+        version = "$jfx"
+        modules = ['javafx.controls', 'javafx.fxml', 'javafx.media', 'javafx.swing', 'javafx.web']
+    }
+}
+
+test {
+    useJUnitPlatform()
+}

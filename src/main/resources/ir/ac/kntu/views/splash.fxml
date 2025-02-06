@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.FontWeight?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.layout.VBox?>
+<?import io.github.palexdev.materialfx.controls.MFXProgressBar?>
+
+<StackPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ir.ac.kntu.controllers.SplashController" style="-fx-background-color: #1DA1F2;" stylesheets="@/css/style.css">
+
+    <VBox alignment="CENTER" spacing="20">
+        <ImageView fitWidth="100" fitHeight="100">
+            <Image url="@/images/logo-white.png" />
+        </ImageView>
+
+        <Text text="Meowter" styleClass="title" style="-fx-font-size: 24px; -fx-font-weight: 900; -fx-fill: white; -fx-font-family: Helvetica;" />
+
+        <MFXProgressBar fx:id="progressBar" progress="0.0" styleClass="custom-progress-bar" style="-fx-pref-width: 200;" />
+    </VBox>
+</StackPane>

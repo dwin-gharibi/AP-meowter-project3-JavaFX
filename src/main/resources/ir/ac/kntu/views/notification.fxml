@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXScrollPane?>
+<?import io.github.palexdev.materialfx.controls.MFXToggleButton?>
+<?import io.github.palexdev.mfxresources.fonts.MFXFontIcon?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="rootPane" prefHeight="720.0" prefWidth="1280.0" styleClass="rootPane" stylesheets="@/css/notification.css"
+            xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ir.ac.kntu.controllers.NotificationsController">
+
+    <top>
+        <HBox alignment="CENTER_RIGHT" styleClass="header">
+            <Region HBox.hgrow="ALWAYS"/>
+            <HBox fx:id="filterContainer" spacing="10" styleClass="filter-container">
+                <MFXToggleButton fx:id="generalButton" text="General" styleClass="filter-button" onAction="#onFilterButtonClicked"/>
+                <MFXToggleButton fx:id="likesButton" text="Likes" styleClass="filter-button" onAction="#onFilterButtonClicked"/>
+                <MFXToggleButton fx:id="commentsButton" text="Comments" styleClass="filter-button" onAction="#onFilterButtonClicked"/>
+                <MFXToggleButton fx:id="messagesButton" text="Messages" styleClass="filter-button" onAction="#onFilterButtonClicked"/>
+            </HBox>
+        </HBox>
+    </top>
+
+    <center>
+        <MFXScrollPane fx:id="scrollPane" fitToWidth="true" hbarPolicy="NEVER" styleClass="content-scroll">
+            <VBox fx:id="notificationsContainer" styleClass="content">
+            </VBox>
+        </MFXScrollPane>
+    </center>
+
+    <bottom>
+        <HBox alignment="CENTER" styleClass="footer">
+            <Label fx:id="footerLabel" text="© 2025 Meowter. All rights reserved." styleClass="footer-text"/>
+        </HBox>
+    </bottom>
+</BorderPane>

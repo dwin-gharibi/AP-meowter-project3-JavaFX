@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-configuration">
+<hibernate-configuration>
+    <session-factory>
+        <!-- JDBC Database connection settings -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/meowter_db</property> <!-- Connects to MySQL container -->
+        <property name="hibernate.connection.username">root</property> <!-- MySQL root username -->
+        <property name="hibernate.connection.password">password</property> <!-- MySQL password -->
+
+        <!-- JDBC connection pool settings -->
+        <property name="hibernate.c3p0.min_size">0</property>
+        <property name="hibernate.c3p0.max_size">0</property>
+        <property name="hibernate.c3p0.timeout">300</property>
+
+        <!-- Specify Hibernate dialect for MySQL -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+
+        <!-- Enable Hibernate's automatic session context management -->
+        <property name="hibernate.current_session_context_class">thread</property>
+
+        <!-- Enable automatic schema creation -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- Show SQL -->
+        <property name="hibernate.show_sql">false</property>
+
+        <!-- Format SQL output -->
+        <property name="hibernate.format_sql">false</property>
+
+        <!-- Disable second-level cache (to avoid cache issues) -->
+        <property name="hibernate.cache.use_second_level_cache">false</property>
+        <property name="hibernate.cache.use_query_cache">false</property>
+
+    </session-factory>
+</hibernate-configuration>

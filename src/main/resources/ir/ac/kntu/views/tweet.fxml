@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXScrollPane?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import io.github.palexdev.mfxresources.fonts.MFXFontIcon?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="rootPane" prefHeight="720.0" prefWidth="1280.0" styleClass="rootPane" stylesheets="@/css/tweet.css"
+            xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ir.ac.kntu.controllers.TweetsController">
+
+    <top>
+        <HBox alignment="CENTER_RIGHT" styleClass="header">
+            <MFXButton fx:id="createPostButton" text="Create New Post" styleClass="header-button" onAction="#createNewPost">
+                <graphic>
+                    <MFXFontIcon description="fas-plus" size="16" styleClass="header-icon"/>
+                </graphic>
+            </MFXButton>
+            <Region HBox.hgrow="ALWAYS"/>
+        </HBox>
+    </top>
+
+    <center>
+        <MFXScrollPane fx:id="scrollPane" fitToWidth="true" hbarPolicy="NEVER" styleClass="content-scroll">
+            <VBox fx:id="postsContainer" styleClass="content">
+            </VBox>
+        </MFXScrollPane>
+    </center>
+
+    <bottom>
+        <HBox alignment="CENTER" styleClass="footer">
+            <Label text="© 2025 Meowter. All rights reserved." styleClass="footer-text"/>
+        </HBox>
+    </bottom>
+</BorderPane>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXPasswordField?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.FontWeight?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" stylesheets="@../../../../css/TextFields.css" spacing="20" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ir.ac.kntu.controllers.LoginController">
+    <ImageView fitWidth="80" fitHeight="70">
+        <Image url="@/images/logo.png" />
+    </ImageView>
+
+    <Text text="Welcome Back!" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-fill: #1DA1F2;" />
+
+    <MFXTextField fx:id="usernameField" floatMode="BORDER" floatingText="Username" prefWidth="300" style="-fx-font-size: 14px;" />
+
+    <MFXPasswordField fx:id="passwordField" floatMode="BORDER" floatingText="Password" prefWidth="300" style="-fx-font-size: 14px;" />
+
+    <MFXButton fx:id="loginButton" text="Login" onAction="#handleLogin" style="-fx-background-color: #1DA1F2; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 5;" prefWidth="300" />
+
+    <Text text="Don't have an account?" style="-fx-font-size: 12px; -fx-fill: #657786;" />
+
+    <MFXButton text="Sign Up" onAction="#handleSignUp" style="-fx-background-color: transparent; -fx-text-fill: #1DA1F2; -fx-font-size: 14px; -fx-font-weight: bold; -fx-border-color: #1DA1F2; -fx-border-radius: 5;" prefWidth="300" />
+</VBox>

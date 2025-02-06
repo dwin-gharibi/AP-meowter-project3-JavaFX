@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXScrollPane?>
+<?import io.github.palexdev.mfxresources.fonts.MFXFontIcon?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="rootPane" prefHeight="720.0" prefWidth="1280.0" styleClass="rootPane" stylesheets="@/css/profile.css"
+            xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ir.ac.kntu.controllers.ProfileController">
+
+    <top>
+        <HBox alignment="CENTER_RIGHT" styleClass="header">
+            <MFXButton text="Back" styleClass="header-button">
+                <graphic>
+                    <MFXFontIcon description="fas-arrow-left" size="16" styleClass="header-icon"/>
+                </graphic>
+            </MFXButton>
+            <Region HBox.hgrow="ALWAYS"/>
+            <MFXButton text="Edit Profile" styleClass="header-button">
+                <graphic>
+                    <MFXFontIcon description="fas-edit" size="16" styleClass="header-icon"/>
+                </graphic>
+            </MFXButton>
+        </HBox>
+    </top>
+
+    <center>
+        <MFXScrollPane fitToWidth="true" hbarPolicy="NEVER" styleClass="content-scroll">
+
+            <VBox styleClass="content">
+                <StackPane styleClass="profile-header">
+                    <ImageView fitWidth="480" fitHeight="200" styleClass="cover-photo">
+                        <Image url="@/images/background.png"/>
+                    </ImageView>
+                    <ImageView fitWidth="100" fitHeight="100" styleClass="profile-photo">
+                    <Image url="@/images/avatar.png"/>
+                    </ImageView>
+                </StackPane>
+
+                <VBox styleClass="profile-details">
+                    <Label fx:id="usernameLabel" text="User Name" styleClass="profile-username"/>
+                    <Label fx:id="usernameText" text="username" styleClass="profile-handle"/>
+                    <Label fx:id="bioLabel" text="Bio: This is a sample bio. You can edit it in the profile settings." styleClass="profile-bio"/>
+                    <HBox spacing="20" styleClass="profile-stats">
+                        <Label fx:id="followersLabel" text="100 Followers" styleClass="profile-stat"/>
+                        <Label fx:id="followingLabel" text="50 Following" styleClass="profile-stat"/>
+                    </HBox>
+                </VBox>
+
+                <VBox fx:id="postsContainer" styleClass="posts-container">
+
+                </VBox>
+            </VBox>
+        </MFXScrollPane>
+    </center>
+</BorderPane>
+

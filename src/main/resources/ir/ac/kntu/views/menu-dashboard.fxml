@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXScrollPane?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import io.github.palexdev.materialfx.controls.MFXToggleButton?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="rootPane" prefHeight="720.0" prefWidth="1280.0" styleClass="rootPane"
+            stylesheets="@/css/menu-dashboard.css" xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="ir.ac.kntu.controllers.MenuDashboard">
+
+    <top>
+        <VBox spacing="10">
+            <HBox alignment="CENTER_RIGHT" styleClass="header" spacing="10">
+                <MFXTextField fx:id="searchField" floatMode="BORDER" floatingText="Search users or posts..."
+                              styleClass="search-bar"/>
+                <Region HBox.hgrow="ALWAYS"/>
+                <MFXButton text="" styleClass="header-button"/>
+                <MFXButton text="" styleClass="header-button"/>
+            </HBox>
+            <HBox spacing="20" alignment="CENTER" styleClass="filter-container">
+                <MFXToggleButton fx:id="filter24H" text="Last 24 Hours" styleClass="filter-button"/>
+                <MFXToggleButton fx:id="filterWeek" text="Last Week" styleClass="filter-button"/>
+                <MFXToggleButton fx:id="filterMonth" text="Last Month" styleClass="filter-button"/>
+            </HBox>
+        </VBox>
+    </top>
+
+    <padding>
+        <Insets left="20.0" right="20.0" top="10.0" bottom="10.0"/>
+    </padding>
+
+    <center>
+        <MFXScrollPane fitToWidth="true" hbarPolicy="NEVER" styleClass="content-scroll">
+            <VBox fx:id="content" styleClass="content" spacing="15"/>
+        </MFXScrollPane>
+    </center>
+</BorderPane>

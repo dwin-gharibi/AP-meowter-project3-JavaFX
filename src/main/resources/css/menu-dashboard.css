@@ -1,0 +1,109 @@
+.rootPane {
+    -fx-background-color: #f5f8fa;
+    -fx-padding: 20px;
+}
+
+.header {
+    -fx-background-color: #ffffff;
+    -fx-padding: 10px 20px;
+    -fx-spacing: 10px;
+}
+
+.search-bar {
+    -fx-pref-width: 350px;
+    -fx-background-radius: 20px;
+    -fx-border-radius: 20px;
+}
+
+.sidebar {
+    -fx-background-color: #ffffff;
+    -fx-padding: 20px;
+    -fx-spacing: 20px;
+    -fx-alignment: center;
+}
+
+.menu-label {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1da1f2;
+}
+
+.filter-container {
+    -fx-padding: 10px;
+    -fx-spacing: 10px;
+}
+
+.filter-button {
+    -fx-background-color: #e1e8ed;
+    -fx-text-fill: #1da1f2;
+    -fx-background-radius: 20px;
+    -fx-border-radius: 20px;
+    -fx-padding: 5px 15px;
+    -fx-font-size: 14px;
+}
+
+.filter-button:selected {
+    -fx-background-color: #1da1f2;
+    -fx-text-fill: white;
+}
+
+.content-scroll {
+    -fx-background-color: transparent;
+}
+
+.content {
+    -fx-padding: 20px;
+    -fx-spacing: 15px;
+}
+
+.post-container {
+    -fx-background-color: #ffffff;
+    -fx-padding: 15px;
+    -fx-spacing: 10px;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+}
+
+.post-header {
+    -fx-spacing: 10px;
+}
+
+.post-avatar {
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+}
+
+.post-username {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1da1f2;
+}
+
+.post-handle {
+    -fx-font-size: 14px;
+    -fx-text-fill: #657786;
+}
+
+.post-time {
+    -fx-font-size: 12px;
+    -fx-text-fill: #657786;
+}
+
+.post-content {
+    -fx-font-size: 14px;
+    -fx-text-fill: #14171a;
+}
+
+.post-actions {
+    -fx-spacing: 10px;
+}
+
+.post-action-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #657786;
+    -fx-font-size: 14px;
+}
+
+.post-action-button:hover {
+    -fx-text-fill: #1da1f2;
+}

@@ -1,0 +1,133 @@
+
+.root {
+    -fx-background-color: #f5f8fa;
+    -fx-padding: 10px;
+    -fx-start-margin: 20px;
+}
+.rootPane {
+    -fx-padding: 20px;
+    -fx-margin: 10px;
+}
+
+.center-content {
+    -fx-margin: 10px;
+}
+
+.header {
+    -fx-background-color: #ffffff;
+    -fx-padding: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0, 0, 0);
+}
+
+.header-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #1da1f2;
+    -fx-font-size: 14px;
+}
+
+.header-button:hover {
+    -fx-text-fill: #1991db;
+}
+
+.profile-header {
+    -fx-alignment: center;
+}
+
+.cover-photo {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0, 0, 0);
+}
+
+.profile-photo {
+    -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0, 0, 0);
+    -fx-translate-y: 100px;
+}
+
+.profile-details {
+    -fx-padding: 120px 20px 20px 20px;
+    -fx-spacing: 10px;
+    -fx-alignment: center-left;
+}
+
+.profile-username {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #14171a;
+}
+
+.profile-handle {
+    -fx-font-size: 16px;
+    -fx-text-fill: #657786;
+}
+
+.profile-bio {
+    -fx-font-size: 14px;
+    -fx-text-fill: #14171a;
+}
+
+.profile-stats {
+    -fx-padding: 10px 0;
+}
+
+.profile-stat {
+    -fx-font-size: 14px;
+    -fx-text-fill: #657786;
+}
+
+.posts-container {
+    -fx-spacing: 20px;
+    -fx-padding: 20px;
+}
+
+.post-container {
+    -fx-background-color: #ffffff;
+    -fx-padding: 15px;
+    -fx-spacing: 10px;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0, 0, 0);
+}
+
+.post-header {
+    -fx-spacing: 10px;
+}
+
+.post-avatar {
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+}
+
+.post-username {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1da1f2;
+}
+
+.post-handle {
+    -fx-font-size: 14px;
+    -fx-text-fill: #657786;
+}
+
+.post-time {
+    -fx-font-size: 12px;
+    -fx-text-fill: #657786;
+}
+
+.post-content {
+    -fx-font-size: 14px;
+    -fx-text-fill: #14171a;
+}
+
+.post-actions {
+    -fx-spacing: 10px;
+}
+
+.post-action-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #657786;
+}
+
+.post-action-button:hover {
+    -fx-text-fill: #1da1f2;
+}

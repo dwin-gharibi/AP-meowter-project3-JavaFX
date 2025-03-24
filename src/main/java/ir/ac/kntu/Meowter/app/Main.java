@@ -17,9 +17,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
-//   userService.createUser("admin", "admin@admin.com", "Admin@123", Role.ADMIN);
-//   userService.createUser("support", "support@support.com", "Support@123", Role.SUPPORT);
-
 public class Main {
     public static void main(String[] args) {
         KafkaUtil kafkaUtil = new KafkaUtil(
